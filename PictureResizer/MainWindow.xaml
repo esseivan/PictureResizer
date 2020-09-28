@@ -1,0 +1,35 @@
+﻿<Window x:Class="PictureResizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PictureResizer"
+        mc:Ignorable="d"
+        Title="Redimensionneur d'images" Height="200.027" Width="398.667" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Sélectionner" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <CheckBox Name="cbResize" Content="Redimensionner" IsChecked="True" HorizontalAlignment="Left" Margin="11,35,0,0" VerticalAlignment="Top" Width="147"/>
+        <GroupBox Header="Redimensionner" HorizontalAlignment="Left" Height="110" Margin="10,55,0,0" VerticalAlignment="Top" Width="172">
+            <Grid>
+                <TextBox Name="valX" HorizontalAlignment="Left" Height="23" Margin="108,10,0,0" TextWrapping="Wrap" Text="640" VerticalAlignment="Top" Width="42"/>
+                <Label Content="Max X" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" RenderTransformOrigin="0.739,0.117" Margin="10,10,0,0"/>
+                <TextBox Name="valY" HorizontalAlignment="Left" Height="23" Margin="108,38,0,0" TextWrapping="Wrap" Text="640" VerticalAlignment="Top" Width="42"/>
+                <Label Content="Max Y" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Height="23" RenderTransformOrigin="0.548,-0.022"/>
+                <CheckBox Name="valMinMax" IsChecked="True" Content="Min (OFF) / Max (ON)" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="147"/>
+            </Grid>
+        </GroupBox>
+        <CheckBox Name="cbCompress" IsChecked="True" Content="Comprimer" HorizontalAlignment="Left" Margin="187,35,0,0" VerticalAlignment="Top"/>
+        <GroupBox Header="Comprimer" HorizontalAlignment="Left" Height="110" Margin="187,55,0,0" VerticalAlignment="Top" Width="197">
+            <Grid>
+                <ComboBox x:Name="cmbQuality" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="165"/>
+                <Label Content="Qualité" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="23" Width="49"/>
+
+            </Grid>
+        </GroupBox>
+        <Button Content="Répéter" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>
